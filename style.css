@@ -1,0 +1,1002 @@
+/* Estilos Generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Letras blancas */
+  line-height: 1.6;
+}
+
+a {
+  color: #fff; /* Enlaces en blanco */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d4af37; /* Dorado al hacer hover */
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  padding: 1rem 0;
+  border-bottom: 2px solid #d4af37; /* Línea dorada */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo img {
+  height: 60px; /* Ajusta el tamaño del logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('../img/fondo.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: #d4af37; /* Fondo dorado */
+  color: #000; /* Texto negro */
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #ffd700; /* Dorado más brillante */
+  transform: scale(1.1); /* Efecto de escala */
+}
+
+/* Especialidades Section */
+.especialidades {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #111; /* Fondo oscuro */
+}
+
+.especialidades h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.especialidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.especialidad {
+  background-color: #222; /* Fondo gris oscuro */
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.especialidad:hover {
+  transform: translateY(-10px); /* Efecto de levitación */
+}
+
+.especialidad img {
+  width: 100%;
+  height: 200px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Ajusta la imagen sin distorsionar */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.especialidad h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Reseñas Section */
+.reseñas {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #000;
+}
+
+.reseñas h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.reseñas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.reseña {
+  background-color: #111; /* Fondo oscuro */
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.reseña:hover {
+  transform: translateY(-10px); /* Efecto de levitación */
+}
+
+.reseña p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.reseña span {
+  font-size: 1rem;
+  color: #d4af37; /* Texto en dorado */
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  padding: 2rem 0;
+  border-top: 2px solid #d4af37; /* Línea dorada */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p, .footer-section a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-section a:hover {
+  color: #d4af37; /* Dorado al hacer hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+
+  .especialidades h2, .reseñas h2 {
+    font-size: 2rem;
+  }
+}
+/* Historia Section */
+.historia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #111; /* Fondo oscuro */
+}
+
+.historia-content {
+  max-width: 60%;
+}
+
+.historia-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.historia-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.historia-imagen img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Misión y Visión Section */
+.mision-vision {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #000;
+}
+
+.mision, .vision {
+  background-color: #222; /* Fondo gris oscuro */
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.mision h3, .vision h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.mision p, .vision p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Equipo Section */
+.equipo {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #111; /* Fondo oscuro */
+}
+
+.equipo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.miembro img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.miembro h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.miembro p {
+  font-size: 1.1rem;
+  color: #d4af37; /* Texto en dorado */
+}
+/* Menú Section */
+.menu {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #111; /* Fondo oscuro */
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.menu-item {
+  background-color: #222; /* Fondo gris oscuro */
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px); /* Efecto de levitación */
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.menu-item .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d4af37; /* Precio en dorado */
+}
+/* Estilos Generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Letras blancas */
+  line-height: 1.6;
+}
+
+a {
+  color: #fff; /* Enlaces en blanco */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d4af37; /* Dorado al hacer hover */
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  padding: 1rem 0;
+  border-bottom: 2px solid #d4af37; /* Línea dorada */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo img {
+  height: 60px; /* Ajusta el tamaño del logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('../img/fondo.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: #d4af37; /* Fondo dorado */
+  color: #000; /* Texto negro */
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #ffd700; /* Dorado más brillante */
+  transform: scale(1.1); /* Efecto de escala */
+}
+
+/* Sección Reserva */
+.reserva {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #111; /* Fondo oscuro */
+}
+
+.reserva h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.reserva-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.reserva-form .btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  background-color: #d4af37; /* Fondo dorado */
+  color: #000; /* Texto negro */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reserva-form .btn:hover {
+  background-color: #ffd700; /* Dorado más brillante */
+}
+
+.disponibilidad {
+  margin-top: 2rem;
+}
+
+.disponibilidad h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.horarios p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Botón del Carrito */
+.carrito-btn {
+  position: fixed;
+  top: 80px; /* Ajustado para que no tape el menú */
+  right: 20px;
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* Barra Lateral del Carrito */
+.carrito {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background-color: #111;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.cerrar-carrito {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.carrito h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.carrito-items {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.carrito-item button {
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carrito-acciones {
+  margin-top: 1rem;
+}
+
+.vaciar-carrito {
+  width: 100%;
+  background-color: #e74c3c; /* Rojo para el botón de vaciar */
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vaciar-carrito:hover {
+  background-color: #c0392b; /* Rojo más oscuro al hacer hover */
+}
+
+.carrito-total {
+  text-align: right;
+}
+
+.carrito-total h3 {
+  font-size: 1.5rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.carrito-total .btn {
+  background-color: #d4af37; /* Fondo dorado */
+  color: #000; /* Texto negro */
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carrito-total .btn:hover {
+  background-color: #ffd700; /* Dorado más brillante */
+}
+
+/* Sección Productos */
+.productos {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #000;
+}
+
+.productos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.producto {
+  background-color: #222; /* Fondo gris oscuro */
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-10px); /* Efecto de levitación */
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.producto h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.producto .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d4af37; /* Precio en dorado */
+}
+
+.producto .btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  background-color: #d4af37; /* Fondo dorado */
+  color: #000; /* Texto negro */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto .btn:hover {
+  background-color: #ffd700; /* Dorado más brillante */
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  padding: 2rem 0;
+  border-top: 2px solid #d4af37; /* Línea dorada */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.footer-section p, .footer-section a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-section a:hover {
+  color: #d4af37; /* Dorado al hacer hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+
+  .reserva h2, .productos h2 {
+    font-size: 2rem;
+  }
+
+  .carrito {
+    width: 100%;
+    right: -100%;
+  }
+
+  .carrito-btn {
+    top: 80px; /* Ajustado para móviles */
+    right: 10px;
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+/* Estilos Generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Letras blancas */
+  line-height: 1.6;
+}
+
+a {
+  color: #fff; /* Enlaces en blanco */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d4af37; /* Dorado al hacer hover */
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  padding: 1rem 0;
+  border-bottom: 2px solid #d4af37; /* Línea dorada */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo img {
+  height: 60px; /* Ajusta el tamaño del logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  height: 50vh;
+  background-image: url('../img/fondo.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Sección Contacto */
+.contacto {
+  padding: 4rem 2rem;
+  background-color: #111; /* Fondo oscuro */
+}
+
+.contacto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.contacto-info, .contacto-form {
+  flex: 1;
+}
+
+.contacto-info h2, .contacto-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.contacto-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.contacto-form .formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contacto-form .btn {
+  background-color: #d4af37; /* Fondo dorado */
+  color: #000; /* Texto negro */
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contacto-form .btn:hover {
+  background-color: #ffd700; /* Dorado más brillante */
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  padding: 2rem 0;
+  border-top: 2px solid #d4af37; /* Línea dorada */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.footer-section p, .footer-section a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-section a:hover {
+  color: #d4af37; /* Dorado al hacer hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+}

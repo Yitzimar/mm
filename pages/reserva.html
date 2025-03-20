@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oro y Masa - Reserva</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../img/logo.jpg" alt="Logo de Oro y Masa">
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="carta.html">Carta</a></li>
+        <li><a href="reserva.html">Reserva</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cuerpo (Main) -->
+  <main class="main">
+    <!-- Sección Hero -->
+    <section class="hero">
+      <h1 class="hero-title">Reserva tu Mesa</h1>
+      <p class="hero-text">Disfruta de una experiencia única en Oro y Masa.</p>
+    </section>
+
+    <!-- Sección Reserva -->
+    <section class="reserva">
+      <h2>Haz tu Reserva</h2>
+      <form class="reserva-form">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+        <div class="form-group">
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" name="hora" required>
+        </div>
+        <div class="form-group">
+          <label for="personas">Número de Personas:</label>
+          <input type="number" id="personas" name="personas" min="1" placeholder="Ej: 2" required>
+        </div>
+        <button type="submit" class="btn">Reservar</button>
+      </form>
+
+      <!-- Disponibilidad -->
+      <div class="disponibilidad">
+        <h3>Horarios Disponibles</h3>
+        <div class="horarios">
+          <p><strong>Lunes a Viernes:</strong> 12:00 - 22:00</p>
+          <p><strong>Sábados y Domingos:</strong> 11:00 - 23:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón para abrir el carrito -->
+    <button class="carrito-btn" onclick="abrirCarrito()">🛒 Ver Carrito</button>
+
+    <!-- Sección Carrito (Barra Lateral) -->
+    <aside class="carrito" id="carrito">
+      <button class="cerrar-carrito" onclick="cerrarCarrito()">← Cerrar</button>
+      <h2>Tu Carrito</h2>
+      <div class="carrito-items" id="carrito-items">
+        <!-- Los productos seleccionados se mostrarán aquí -->
+      </div>
+      <div class="carrito-acciones">
+        <button class="btn vaciar-carrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <div class="carrito-total">
+          <h3>Total: $<span id="carrito-total">0.00</span></h3>
+          <button class="btn" onclick="procesarPago()">Pagar</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sección Productos -->
+    <section class="productos">
+      <h2>Nuestros Productos</h2>
+      <div class="productos-grid">
+        <!-- Empanadas Argentinas -->
+        <div class="producto">
+          <img src="../img/enpanadasarg.jpg" alt="Empanadas Argentinas">
+          <h3>Empanadas Argentinas</h3>
+          <p>Rellenas de carne, pollo o jamón y queso.</p>
+          <p class="precio">$5.00 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Empanadas Argentinas', 5.00)">Agregar</button>
+        </div>
+
+        <!-- Empanadas de Carne Venezolana -->
+        <div class="producto">
+          <img src="../img/carne.jpg" alt="Empanadas de Carne Venezolana">
+          <h3>Empanadas de Carne Venezolana</h3>
+          <p>Rellenas de carne mechada, cebolla y pimientos.</p>
+          <p class="precio">$5.50 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Empanadas de Carne Venezolana', 5.50)">Agregar</button>
+        </div>
+
+        <!-- Empanadas de Pollo Venezolana -->
+        <div class="producto">
+          <img src="../img/pollovene.jpg" alt="Empanadas de Pollo Venezolana">
+          <h3>Empanadas de Pollo Venezolana</h3>
+          <p>Rellenas de pollo, aguacate y mayonesa.</p>
+          <p class="precio">$5.50 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Empanadas de Pollo Venezolana', 5.50)">Agregar</button>
+        </div>
+
+        <!-- Empanadas de Queso y Jamón Venezolana -->
+        <div class="producto">
+          <img src="../img/quesovene.jpg" alt="Empanadas de Queso y Jamón Venezolana">
+          <h3>Empanadas de Queso y Jamón Venezolana</h3>
+          <p>Rellenas de queso guayanés y jamón.</p>
+          <p class="precio">$5.00 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Empanadas de Queso y Jamón Venezolana', 5.00)">Agregar</button>
+        </div>
+
+        <!-- Empanadas de Pollo Argentina -->
+        <div class="producto">
+          <img src="../img/pollo.jpg" alt="Empanadas de Pollo Argentina">
+          <h3>Empanadas de Pollo Argentina</h3>
+          <p>Rellenas de pollo desmenuzado, cebolla y pimientos.</p>
+          <p class="precio">$5.00 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Empanadas de Pollo Argentina', 5.00)">Agregar</button>
+        </div>
+
+        <!-- Empanadas de Jamón y Queso Argentina -->
+        <div class="producto">
+          <img src="../img/queso.jpg" alt="Empanadas de Jamón y Queso Argentina">
+          <h3>Empanadas de Jamón y Queso Argentina</h3>
+          <p>Rellenas de jamón y queso derretido.</p>
+          <p class="precio">$4.50 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Empanadas de Jamón y Queso Argentina', 4.50)">Agregar</button>
+        </div>
+
+        <!-- Anticuchos -->
+        <div class="producto">
+          <img src="../img/anticuchos.jpg" alt="Anticuchos">
+          <h3>Anticuchos</h3>
+          <p>Brochetas de corazón de res marinadas y asadas.</p>
+          <p class="precio">$7.00 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Anticuchos', 7.00)">Agregar</button>
+        </div>
+
+        <!-- Cachapas -->
+        <div class="producto">
+          <img src="../img/cachapa.jpg" alt="Cachapas">
+          <h3>Cachapas</h3>
+          <p>Tortillas de maíz dulce rellenas de queso.</p>
+          <p class="precio">$6.50 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Cachapas', 6.50)">Agregar</button>
+        </div>
+
+        <!-- Tequeños -->
+        <div class="producto">
+          <img src="../img/tequeno.jpg" alt="Tequeños">
+          <h3>Tequeños</h3>
+          <p>Palitos de masa rellenos de queso y fritos.</p>
+          <p class="precio">$5.00 c/u</p>
+          <button class="btn" onclick="agregarAlCarrito('Tequeños', 5.00)">Agregar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Dirección: Calle Falsa 123, Ciudad</p>
+        <p>Teléfono: +123 456 789</p>
+        <p>Email: info@oroymasa.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Horario</h3>
+        <p>Lunes a Viernes: 12:00 - 22:00</p>
+        <p>Sábados y Domingos: 11:00 - 23:00</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Oro y Masa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para el carrito -->
+  <script>
+    const carrito = [];
+    let total = 0;
+
+    function abrirCarrito() {
+      document.getElementById('carrito').style.right = '0';
+    }
+
+    function cerrarCarrito() {
+      document.getElementById('carrito').style.right = '-400px';
+    }
+
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      const carritoItems = document.getElementById('carrito-items');
+      const carritoTotal = document.getElementById('carrito-total');
+      carritoItems.innerHTML = '';
+      total = 0;
+
+      carrito.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'carrito-item';
+        div.innerHTML = `
+          <p>${item.nombre} - $${item.precio.toFixed(2)}</p>
+          <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
+        `;
+        carritoItems.appendChild(div);
+        total += item.precio;
+      });
+
+      carritoTotal.textContent = total.toFixed(2);
+    }
+
+    function eliminarDelCarrito(index) {
+      carrito.splice(index, 1);
+      actualizarCarrito();
+    }
+
+    function vaciarCarrito() {
+      carrito.length = 0;
+      actualizarCarrito();
+    }
+
+    function procesarPago() {
+      if (carrito.length === 0) {
+        alert('Tu carrito está vacío. Agrega productos antes de pagar.');
+      } else {
+        // Redirigir a una página de pago (simulado)
+        window.location.href = 'pago.html';
+      }
+    }
+  </script>
+</body>
+</html>
